@@ -1,0 +1,6 @@
+syntax = "proto3"
+message CreateOrderRequest {
+    int64 user_id = 1;
+    repeated Item items = 2;
+    float amount = 3;
+}
