@@ -1,6 +1,16 @@
 syntax = "proto3"
+option go_package="github.com/malen/microservices-proto/order";
+
 message CreateOrderRequest {
     int64 user_id = 1;
     repeated Item items = 2;
     float amount = 3;
+}
+
+message Item {
+    string name = 1;
+}
+
+service Order {
+    rpc Create(CreateOrderRequest) returns (CreateOrderResponse) {}
 }
