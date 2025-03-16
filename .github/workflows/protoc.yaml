@@ -7,6 +7,9 @@ jobs:
   protoc:
     name: "Generate"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 赋予 GITHUB_TOKEN 写入权限
+
     strategy:
       matrix:
         service: ["order", "payment", "shipping"]

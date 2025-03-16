@@ -19,3 +19,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
     --go-grpc_out=. \
     --go-grpc_opt=paths=source_relative \
     payment.proto
+
+## 创建标签推送远端
+git tag -a v1.0.0 -m "Release version 1.0.0"
+git push origin v1.0.0
